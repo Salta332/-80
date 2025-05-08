@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Беседка</title>
+    <link rel="stylesheet" href="../css/chatstyle.css">
+    <link rel="stylesheet" href="../css/regstyle.css">
+</head>
+<body>
+    <div class="chatbox">
+        <div class="onexp">
+            <img src="../images/strength.png"><span id="str"></span>
+            <img src="../images/health.png"><span id="hls"></span>
+            <img src="../images/defense.png"><span id="def"></span>
+        </div>
+        <div class="exp">
+            <div class="expprog"></div>
+        </div>
+        <div class="locname">Беседка</div>
+        <div class="spacer"></div>
+        <div class="go">
+            <form id="edit">
+                <div style="padding: 0px; text-align: center; vertical-align: top;">
+                    <a href="chatroom.html" style="display: inline-block; vertical-align: top;">
+                    <div class="ref">
+                        <img src="../images/refresh.png" alt="">
+                    </div>
+                </a>
+                <input type="text" class="text" name="msg" value="">
+                <a href="" style="text-decoration: none;">
+                    <img class="smile" src="../images/big_smile.png" alt="">
+                </a>
+                <input type="button" name="save" value="Отправить" class="sub" onclick="mess()">
+                </div>
+            </form>
+        </div>
+        <div class="spacer"></div>
+        <div class="msgs" style="padding: 0; background: url(../images/bg5.png);">Здесь будут сообщение</div>
+        <div class="spacer"></div>
+        <div class="shm">
+            <a href="" class="ashow">Показать ещё</a>
+        </div>
+        <div class="spacer"></div>
+        <a href="character.html" class="link">
+            <img src="../images/hero.png" alt="">Персонаж
+        </a>
+        <a href="myclan.html" class="link">
+            <img src="../images/clan.png" alt="">Клан
+        </a>
+        <a href="main.html" class="link">
+            <img src="../images/main.png" alt="">Главная
+        </a>
+        <div class="spacer"></div>
+        <div class="in_all_one">
+            <img src="../images/up.png" alt="">
+            50 ур.  
+            <img src="../images/xp.png" alt="">
+            10000000 / 10000000 опыт  
+            <img src="../images/moneta.png" alt="">
+            125g монет
+            <img src="../images/gold.png" alt="">
+            123456 золотых   
+            <img src="../images/diamond.png" alt=""> 
+            10m крысталлов  
+        </div>
+    </div>
+    <div class="footer_one">
+        <a href="chatroom.html" class="ff">Чат</a>
+        |
+        <a href="forum.html" class="ff">Форум</a>
+        |
+        <a href="" class="action">Акция</a>
+        <div style="padding: 3px;"></div>
+        <div style="font-size: 12px; color: violet;">Всем крыссталлы и монеты +200% просто так!</div>
+        <div style="padding: 3px;"></div>
+        <div style="font-size: 12px;">
+        <span id="serverTime"></span> Здесь будет время по серверу!
+        <div style="font-size: 12px;">© 2021, 16+</div>
+    </div>
+    <a href="regmenu.html" style="color: #a5a5a5;font-size: 12px;">Выход</a>
+        <div style="padding-top: 15px; color: #a5a5a5;">
+            <a href="#">
+                <img class="soc" src="../images/soc_fb1.png" alt="">
+            </a>
+            <a href="#">
+                <img class="soc" src="../images/Inst1.jpg" alt="">
+            </a>
+        <a href="#">
+            <img class="soc" src="../images/soc_ok1.png" alt="">
+        </a>
+        <a href="#">
+            <img class="soc" src="../images/soc_vk1.png" alt="">
+        </a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+При нажатие кнопки отправить должно появится сообщения отправленные пользователями в контейнере с классом 'msgs', с маленькой кнопкой(Отправить)
+и количество поместившие сообщения пользователей 15.
+и если нажать кнопку Показать ещё появились еще 15 сообщения которые были написаны пользователями и появились кнопки <<, 1, 2, 3, >>
+и при нажатие показались сообщение пользователей
+Не забудь поставит данные пользователей в свои место.
+Сделай так чтобы когда пользователь написал сообщение
+появился его имя и рядом текст его сообщения и рядом текстом кнопка для ответа на этого сообщения  пользователя написанного сообщения.
+К тому же если пользователь написал сообщение, он видел свое сообщение с права, а сообщение других с лево 

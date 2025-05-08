@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арена</title>
+    <link rel="stylesheet" href="../css/mainstyle.css">
+    <link rel="stylesheet" href="../css/chatstyle.css">
+    <link rel="stylesheet" href="../css/regstyle.css">
+    <script>
+    function timer($elem,$last,$full=0){
+        $last--;
+        var obj=document.getElementById($elem);
+        var min=Math.trunc($last/60);
+        var sec=$last-min*60
+        var retff="";
+        if(min==0)retff=sec+" секунд";
+        else retff=min+" минут";
+        if(min==0 && sec==0)retff="0 секунд";
+       
+        if($last==0){if(!$full)obj.innerHTML='<span style="color:red">00:00</span>';else if($full==1) obj.innerHTML='<span style="color:red">0 мин. 0 сек.</span>';else obj.innerHTML='<span style="color:red">'+retff+'</span>';}
+        else {
+        if(!$full)
+        {
+        if(min<10)min="0"+min;
+        if(sec<10)sec="0"+sec;
+        obj.innerHTML=min+":"+sec;
+        }
+        else if($full==1) obj.innerHTML=min+" мин. "+sec+" сек.";
+        else obj.innerHTML=retff;
+        setTimeout(function(){timer($elem,$last,$full);},1000);
+        }
+       }
+       function serverTime($time)
+       {
+       $time++;
+       var dt=$time-(Math.floor($time/86400)*86400);
+       var h=Math.floor(dt/3600);
+       var m=Math.floor((dt-h*3600)/60);
+       var s=Math.floor((dt-h*3600-m*60));
+       if(h<10)h="0"+h;
+       if(m<10)m="0"+m;
+       if(s<10)s="0"+s;
+       var obj=document.getElementById("serverTime");
+       obj.innerHTML=h+":"+m+":"+s;
+       setTimeout(function(){serverTime($time);},1000);
+       }
+       setTimeout(function(){serverTime(0);},1000);
+           </script>
+</head>
+<body>
+    <div class="box">
+        <div class="onexp">
+            <img src="../images/strength.png"><span id="text_after_img">Сила</span>
+            <img src="../images/health.png"><span id="text_after_img">Здоровые </span>
+            <img src="../images/defense.png"><span id="text_after_img">Защита</span>
+        </div>
+        <div class="exp">
+            <div class="expprog"></div>
+        </div>
+        <div class="locname">Экипировка</div>
+        <div class="spacer"></div>
+
+
+
+
+
+        <div class="spacer2"></div>
+        <a href="character.html" class="link">
+            <img src="../images/hero.png" alt="">Персонаж
+        </a>
+        <a href="myclan.html" class="link">
+            <img src="../images/clan.png" alt="">Клан
+        </a>
+        <a href="main.html" class="link">
+            <img src="../images/main.png" alt="">Главная
+        </a>
+        </div>
+
+        <div class="spacer"></div>
+        <div class="in_all_one">
+            <img src="../images/up.png" alt="">
+            50 ур.  
+            <img src="../images/xp.png" alt="">
+            10000000 / 10000000 опыт  
+            <img src="../images/moneta.png" alt="">
+            125g монет
+            <img src="../images/gold.png" alt="">
+            123456 золотых   
+            <img src="../images/diamond.png" alt=""> 
+            10m крысталлов  
+        </div>
+    </div>
+    <div class="footer_one">
+        <a href="chatroom.html" class="ff">Чат</a>
+        |
+        <a href="forum.html" class="ff">Форум</a>
+        |
+        <a href="" class="action">Акция</a>
+        <div style="padding: 3px;"></div>
+        <div style="font-size: 12px; color: violet;">Всем крыссталлы и монеты +200% просто так!</div>
+        <div style="padding: 3px;"></div>
+        <div style="font-size: 12px;">
+        <span id="serverTime"></span> по мск
+        <div style="font-size: 12px;">&copy; 2021, 16+</div>
+    </div>
+    <a href="regmenu.html" style="color: #a5a5a5;font-size: 12px;">Выход</a>
+        <div style="padding-top: 15px; color: #a5a5a5;" >
+            <a href="#">
+                <img class="soc" src="../images/soc_fb1.png" alt="">
+            </a>
+            <a href="#">
+                <img class="soc" src="../images/Inst1.jpg" alt="">
+            </a>
+        <a href="#">
+            <img class="soc" src="../images/soc_ok1.png" alt="">
+        </a>
+        <a href="#">
+            <img class="soc" src="../images/soc_vk1.png" alt="">
+        </a>
+        </div>
+</body>
+</html>

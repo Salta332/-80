@@ -1,0 +1,11 @@
+﻿.env
+vendor/
+node_modules/
+.vscode/
+*.log
+*.sql
+*.sqlite
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db

@@ -1,0 +1,702 @@
+body {
+    background-color: #121212;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.fix {
+    max-width: 480px;
+    display: flex;
+    flex-direction: row;
+    background-color: #1a1a1a;
+    align-items: center;
+}
+.form-container li {
+
+    padding-top: 5px;
+    margin-left: 5px;
+}
+.form-container li a {
+    color: #e5e5e5;
+    text-decoration: none;
+}
+.form-container li a:hover {
+    color: #c2c2c2;
+}
+hr {
+    width: 97%;
+    border-color: #666;
+}
+
+/* Стили для контейнера с сообщением */ 
+.message-container { 
+    margin: 15px auto;
+    padding: 15px; 
+    width: 90%; 
+    text-align: center; 
+    border-radius: 5px; 
+    display: none; 
+    /* По умолчанию скрыт */ 
+} 
+.error-message { 
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(200, 0, 0, 0.8);
+    color: #d63031;
+}
+.success-message {
+    background: rgba(0, 200, 0, 0.2);
+    border: 1px solid #0f0;
+    color: #0f0;
+}
+
+/* гл. контейнер */
+.container {
+    text-align: center; 
+    max-width: 350px;
+}
+@media screen and (min-width: 480px) {
+    .container {
+        max-width: 480px;
+    }
+}
+.game-title {
+    font-size: 28px;    
+    color: #ffc933;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.form-container {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 166, 0, 0.6);
+}
+
+.game-image {
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #ffc933;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+/* титулка */
+.title {
+    font-size: 20px;
+    color: #ffc933;
+    text-transform: uppercase;
+}
+
+input {
+    width: 93%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+
+.btn {  
+    width: 75%;
+    padding: 12px;
+    background: #ffd500;
+    border: none;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #dbb22bd2;
+}
+
+.btn-secondary {
+    background: #a5a5a5;
+    
+}
+
+.btn-secondary:hover {
+    background: #666;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* парам./рес. перса  */
+.charecters {
+    position: relative;
+    bottom: 3px;
+}
+
+.chars {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #fff;
+}
+
+.onexp {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    
+}
+
+.abc{
+    margin-left: 15px;
+    
+}
+
+.notif-img {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg)
+}
+
+.top-notif {
+    text-align: right;
+    width: 20%;
+
+}
+
+/* Шкала опыта */
+.exp {
+    margin-top: 15px;
+    height: 5px;
+    background-color:#4b4b3e52;
+    border-radius: 3px;
+    margin-left: 0;
+}
+
+.expprog {
+    height: 100%;
+    background-color:rgb(15, 200, 0);
+    border-radius: 3px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* чат/форум */
+.soc{
+    text-decoration: none;
+    color: #ff3366;
+}
+
+/* иконки рес. перса */
+.before_footer_icons {
+    width: 18px;
+    height: 18px;
+}
+
+.icons {
+    width: 20px;
+    height: 20px;
+}
+
+/* контейнер с локациями */
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    text-align: center;
+
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.link img, .imgs {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* отступ */
+.spacer {
+    padding: 3px;
+}
+
+/* контейнер ава + экипировка */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+/* экипировка */
+.links-container1 {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column; 
+    gap: 12px; 
+}
+
+.link1 {
+    border-radius: 5px;
+    border: 2px solid gold;
+    background-image: url('../images/equip/equip-bg.png');
+    align-items: center;
+}
+
+.link1 img {
+    width: 52px; 
+    height: 52px;
+}
+
+/* ава */
+.logo-container {
+    padding-right: 7px;
+    padding-left: 5px;
+    height: 198.8px;
+}
+
+
+/* кнопка атаки монстров */
+
+
+#attack-button {
+    width: 35%;
+    padding: 7px 0 7px 0;
+    background: #0d8600cd;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px; 
+    transition: 0.3s;
+}
+#attack-button:hover {
+    background: #0d8600b1;
+}
+
+#surrender-button {
+    width: 35%;
+    padding: 7px 0 7px 0;   
+    background: rgb(155, 0, 0);
+    border: none;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#surrender-button:hover {
+    background: rgba(155, 0, 0, 0.8);
+}
+
+.monster {
+    width: 100%;
+}
+.char {
+    text-align: left;
+}
+.char p {
+    margin: auto 0;
+    padding-bottom: 3px
+ }
+
+/* филтр редкости монстров */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+
+}
+
+.tab {
+    padding: 10px 13px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: 0.3s;
+    width: 33.33%;
+}
+
+.tab.active {
+    background: #ffd500;
+    color: #000;
+    font-weight: bold;
+}
+
+/* сообщение */
+.notification {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(255, 0, 68, 0.6);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 1000;
+    opacity: 0;
+    transition: top 0.5s ease-out, opacity 0.5s ease-out;
+    width: 100%;
+    text-align: center;
+}
+
+/* Плавное появление */
+.notification.show {
+    top: 20px;
+    opacity: 1;
+}
+
+/* Исчезновение */
+.notification.hide {
+    top: -100px;
+    opacity: 0;
+}
+
+/* Цвета уведомлений */
+.notification.success {
+    background-color: rgba(24, 182, 0, 0.9); /* Зеленый */
+    border: 2px solid  #B71C1C;
+}
+
+.notification.error {
+    background-color: rgba(255, 0, 68, 0.9); /* Красный */
+    border: 2px solid #B71C1C;
+}
+.in_all {
+    align-items: left;
+}
+
+
+p img.icons{
+    position: relative;
+    top: 3px;
+}
+
+/* модальное окно стр. монстров */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Чёрный полупрозрачный фон */
+}
+
+.modal-content {
+    color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #222; /* По умолчанию */
+}
+
+.win {
+    background-color: #008000; /* Зелёный для победы */
+}
+
+.lose {
+    background-color: #800000; /* Тёмно-красный для поражения */
+}
+
+.error {
+    background-color: #800080; /* Фиолетовый для ошибок */
+}
+
+/* крестик */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.monster-card.attack-animation {
+    animation: attack 0.5s ease-in-out;
+}
+@keyframes attack {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.cooldown-timer {
+    color: #ff4444;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+.monster-card.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+/* монстры */
+.monsters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    text-align: center;
+}
+.monster-image {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 5px;
+}
+
+.monster-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+} 
+.m {
+    text-decoration: none;
+    color: white;
+}
+
+.monster-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* monsters.php */
+.level-up-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: gold;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out;
+    text-align: center;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; top: 0; }
+    20% { opacity: 1; top: 20px; }
+    80% { opacity: 1; top: 20px; }
+    100% { opacity: 0; top: 40px; }
+}
+
+.defeat-notification {
+    background-color: rgba(214, 48, 49, 0.1);
+    color: #d63031;
+    border: 1px solid #d63031;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.character-container {
+    display: flex;
+    align-items: center; /* Выравнивание элементов по центру */
+    gap: 15px; /* Отступ между аватаркой и параметрами */
+    margin-bottom: 20px;
+}
+
+.monster-chars, .player-chars {
+    display: flex;
+    flex-direction: column; /* Располагаем параметры вертикально */
+    gap: 5px;
+    text-align: left;
+}
+
+/* gold.php */
+
+.exchange-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.exchange-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.exchange-title {
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.exchange-rate {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.exchange-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.exchange-form input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+}
+
+.exchange-form button {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background: #ffcc00;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    height: min-content;
+    width: 40%;
+}
+
+.exchange-form button:hover {
+    background: #ffdd33;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.alert-error {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid #f00;
+}
+
+.alert-success {
+    background: rgba(0, 255, 0, 0.2);
+    border: 1px solid #0f0;
+}
+
+@media screen and (min-width: 480px) {
+    .links-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+    
+    .link img, .imgs {
+        width: 75px;
+        height: 75px;
+    }
+
+    .btn {  
+        width: 48%;
+        padding: 12px;
+        background: #ffd500;
+        border: none;
+        color: #000000;
+        font-weight: bolder;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px; 
+
+    }
+
+    .btn-secondary {
+        background: #a5a5a5;
+        
+    }
+
+    .monsters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    text-align: center;
+    }
+    
+    .monster-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 5px;
+    }
+
+    .exchange-form button {
+        padding: 8px;
+        width: 30%;
+    }
+    
+}
+
+.spacer {
+    margin-top: 5px;
+}
