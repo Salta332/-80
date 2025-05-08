@@ -1,295 +1,69 @@
-/* Добавьте в arena.css */
-.tab-btn, .btn-fight, .btn-pvp, .difficulty-btn {
-    pointer-events: auto;
-    cursor: pointer;
-    position: relative; /* Для z-index */
-    z-index: 10;
+.arena-container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
-.arena-tabs {
-    display: flex;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #444;
-}
-
-.tab-btn {
-    padding: 10px 20px;
-    background: #333;
-    border: none;
-    color: #ddd;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s;
-}
-
-.tab-btn.active {
-    background: #555;
-    color: #fff;
-    font-weight: bold;
-}
-
-.tab-content {
-    display: none;
-    padding: 15px;
-    background: #2a2a2a;
-    border-radius: 5px;
+.arena-stats {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.tab-content.active-tab {
-    display: block;
+.arena-stats h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
 }
 
-/* Стили бойцов */
-.arena-container {
-    display: flex;
-    justify-content: space-between;
+.arena-controls {
+    text-align: center;
     margin: 20px 0;
-    gap: 20px;
 }
 
-.fighter {
-    flex: 1;
-    padding: 15px;
-    border-radius: 8px;
-    background: #333;
+.arena-rewards {
+    margin-top: 20px;
 }
 
-.fighter.player {
-    border: 2px solid #3498db;
-}
-
-.fighter.opponent {
-    border: 2px solid #e74c3c;
-}
-
-.fighter-header {
-    display: flex;
-    align-items: center;
+.arena-rewards h3 {
+    color: #ffd700;
+    text-align: center;
     margin-bottom: 15px;
 }
 
-.fighter-header img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-    border: 3px solid #444;
-}
-
-.fighter-stats {
-    margin-top: 10px;
-}
-
-.stat-bar {
-    margin-bottom: 8px;
-}
-
-.stat-bar label {
-    display: block;
-    margin-bottom: 3px;
-    font-size: 14px;
-}
-
-.bar-container {
-    position: relative;
-    height: 20px;
-    background: #222;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.bar {
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/*.bar.health {*/
-/*    background: #e74c3c;*/
-/*}*/
-
-/*.bar.strength {*/
-/*    background: #f39c12;*/
-/*}*/
-
-/*.bar.defense {*/
-/*    background: #3498db;*/
-/*}*/
-
-/* Кнопки боя */
-.btn-fight, .btn-pvp {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-fight:hover, .btn-pvp:hover {
-    background: #c0392b;
-}
-
-.btn-pvp {
-    background: #3498db;
-}
-
-.btn-pvp:hover {
-    background: #2980b9;
-}
-
-/* Лог боя */
-.battle-log {
-    margin-top: 20px;
-    background: #222;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.log-content {
-    max-height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-    background: #1a1a1a;
-    border-radius: 3px;
-}
-
-.log-entry {
-    padding: 5px;
-    margin-bottom: 5px;
-    border-left: 3px solid #444;
-    padding-left: 10px;
-}
-
-.log-entry.player {
-    border-left-color: #3498db;
-}
-
-.log-entry.enemy {
-    border-left-color: #e74c3c;
-}
-
-.log-entry.info {
-    border-left-color: #f39c12;
-}
-
-/* Топ игроков */
-.top-players {
+.reward-tiers {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
 }
 
-.player-card {
-    background: #333;
+.reward-tier {
+    background: rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.player-card.top1 {
-    border: 2px solid gold;
-}
-
-.player-card.top2 {
-    border: 2px solid silver;
-}
-
-.player-card.top3 {
-    border: 2px solid #cd7f32; /* бронза */
-}
-
-.player-rank {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 15px;
-    width: 30px;
     text-align: center;
 }
 
-.player-card img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
+.reward-tier h4 {
+    color: #ffd700;
+    margin-bottom: 5px;
 }
 
-.player-info h4 {
-    margin: 0 0 5px 0;
-}
-
-/* История боев */
-.history-list {
-    margin-top: 15px;
-}
-
-.history-item {
-    background: #333;
+.error-message {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid #ff0000;
+    color: #ff0000;
     padding: 10px;
-    margin-bottom: 10px;
     border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    margin: 10px 0;
+    text-align: center;
 }
 
-.history-item.victory {
-    border-left: 4px solid #2ecc71;
-}
-
-.history-item.defeat {
-    border-left: 4px solid #e74c3c;
-}
-
-.battle-result {
-    font-weight: bold;
-    width: 80px;
-}
-
-.battle-opponent {
-    flex: 1;
-    padding: 0 10px;
-}
-
-.battle-rewards {
-    display: flex;
-    gap: 10px;
-    font-size: 14px;
-    color: #aaa;
-}
-
-.battle-date {
-    font-size: 14px;
-    color: #777;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .arena-container {
-        flex-direction: column;
-    }
-    
-    .fighter {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    
-    .top-players {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Для диагностики */
-button, a {
-    z-index: 9999 !important;
+.success-message {
+    background: rgba(0, 255, 0, 0.2);
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
 }
